@@ -1,0 +1,32 @@
+<div *ngIf="appointment">
+
+    <h2>{{ appointment.Id }} Details</h2>
+    <div><span>Id: </span>{{appointment.Id}}</div>
+    <div>
+      <label> Date:
+          <input [(ngModel)]="appointment.Start" placeholder="Start"/>
+          <input [(ngModel)]="appointment.End" placeholder="End"/>
+      </label>
+    </div>
+      
+    <div>
+        <label>Description:
+            <input [(ngModel)]="appointment.Description" placeholder="Description"/>
+          </label>
+    </div>
+
+    <div>
+      <label>Parties:
+          <input [(ngModel)]="appointment.Party" placeholder="Parties"/>
+      </label>
+    </div>
+
+    <div>
+      <label>Notes:
+          <input [(ngModel)]="appointment.Note" placeholder="Notes"/>
+      </label>
+    </div>
+      <button (click)="goBack()">go back</button>
+      <button (click)="save()">save</button>
+</div>
+
